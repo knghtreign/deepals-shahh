@@ -129,6 +129,8 @@ export const SmileResultsMirror: React.FC = () => {
                 src={CLINIC_IMAGES.smileResult}
                 alt="Patient Smile Before Treatment"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center filter sepia-[0.35] brightness-90"
               />
               {/* Subtle BEFORE label badge */}
@@ -154,6 +156,8 @@ export const SmileResultsMirror: React.FC = () => {
                   src={CLINIC_IMAGES.smileResult}
                   alt="Patient Smile After Treatment"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: containerWidth > 0 ? `${containerWidth}px` : '100%',
                     minWidth: containerWidth > 0 ? `${containerWidth}px` : '100%',

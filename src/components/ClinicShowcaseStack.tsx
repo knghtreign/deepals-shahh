@@ -236,6 +236,8 @@ export const ClinicShowcaseStack: React.FC = () => {
                       src={card.imageSrc}
                       alt={card.title}
                       referrerPolicy="no-referrer"
+                      loading={isFront ? 'eager' : 'lazy'}
+                      decoding="async"
                       className="w-full h-full object-cover select-none"
                     />
 

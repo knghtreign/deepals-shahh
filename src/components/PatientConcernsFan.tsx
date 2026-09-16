@@ -215,6 +215,8 @@ export const PatientConcernsFan: React.FC<PatientConcernsFanProps> = ({ onSelect
                     <img
                       src={concern.imageSrc}
                       alt={concern.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
 

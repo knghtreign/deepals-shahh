@@ -234,12 +234,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
               {/* The Cinematic Tooth Render Box */}
               <div
                 onClick={triggerToothSparkle}
-                className="relative cursor-pointer rounded-[28px] sm:rounded-[36px] overflow-hidden border border-slate-200 shadow-xl bg-slate-50 transition-transform duration-500 group-hover:scale-[1.01]"
+                className="relative cursor-pointer rounded-[28px] sm:rounded-[36px] overflow-hidden border border-slate-200 shadow-xl bg-slate-100 transition-transform duration-500 group-hover:scale-[1.01]"
               >
                 <img
                   src={CLINIC_IMAGES.heroToothWorkers}
                   alt="Dental specialists polishing giant 3D porcelain molar tooth"
                   referrerPolicy="no-referrer"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                 />
 

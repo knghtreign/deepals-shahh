@@ -206,6 +206,8 @@ export const DoctorSection: React.FC<DoctorSectionProps> = ({ onOpenBooking }) =
                         src={CLINIC_IMAGES.drDeepalPortrait}
                         alt="Dr. Deepal Shah - Lead Clinician at Malabar Hill"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute bottom-1.5 left-1.5 right-1.5 bg-[#0D1B2A] text-white text-[9px] font-black text-center py-0.5 rounded-md font-['Outfit',sans-serif] border border-amber-300/40">

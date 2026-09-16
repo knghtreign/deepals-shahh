@@ -264,6 +264,8 @@ export const ClinicExperienceGuide: React.FC = () => {
                   src={activeStep.imageSrc}
                   alt={activeStep.headline}
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 

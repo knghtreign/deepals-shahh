@@ -18,6 +18,13 @@ import paediatrics from '../assets/images/paediatric_dental_care_1788595045588.j
 import veneersCrowns from '../assets/images/dental_veneer_crown_1788595062863.jpg';
 import dentalXray from '../assets/images/dental_xray_modern_1788595079091.jpg';
 import dentalBonding from '../assets/images/dental_bonding_macro_1788595094151.jpg';
+import serviceDentures from '../assets/images/service_dentures.jpg';
+import serviceExtractions from '../assets/images/service_extractions.jpg';
+import serviceFillings from '../assets/images/service_fillings.jpg';
+import serviceMouthguards from '../assets/images/service_mouthguards.jpg';
+import serviceRootcanals from '../assets/images/service_rootcanals.jpg';
+import serviceCleaning from '../assets/images/service_cleaning.jpg';
+import serviceReshaping from '../assets/images/service_reshaping.jpg';
 
 // Clinic image asset paths (bundled by Vite for development & production)
 export const CLINIC_IMAGES = {
@@ -39,6 +46,13 @@ export const CLINIC_IMAGES = {
   veneersCrowns,
   dentalXray,
   dentalBonding,
+  serviceDentures,
+  serviceExtractions,
+  serviceFillings,
+  serviceMouthguards,
+  serviceRootcanals,
+  serviceCleaning,
+  serviceReshaping,
 };
 
 export const CLINIC_DETAILS = {
@@ -418,7 +432,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Dentures & Bridges',
     category: 'PROSTHETICS',
     shortDesc: 'Custom fixed bridges and featherlight flexible modern prosthetics.',
-    imageSrc: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceDentures,
     tag: 'BRIDGES',
     badge: 'Natural Alignment',
     color: '#415A77',
@@ -438,7 +452,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Extractions',
     category: 'SURGICAL',
     shortDesc: 'Atraumatic gentle tooth removal with soothing numbing protocols.',
-    imageSrc: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceExtractions,
     tag: 'EXTRACTION',
     badge: 'Gentle & Painless',
     color: '#778D7A',
@@ -448,7 +462,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Fillings & Sealants',
     category: 'RESTORATION',
     shortDesc: 'Seamless tooth-colored composite resins and cavity-guard sealants.',
-    imageSrc: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceFillings,
     tag: 'FILLINGS',
     badge: 'Invisible Shield',
     color: '#415A77',
@@ -458,7 +472,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Mouth Guards',
     category: 'PROTECTION',
     shortDesc: 'Precision-molded guards for nighttime bruxism and athletic sports.',
-    imageSrc: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceMouthguards,
     tag: 'GUARDS',
     badge: 'Custom Molded',
     color: '#D4C4A8',
@@ -498,7 +512,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Root Canals',
     category: 'ENDODONTICS',
     shortDesc: 'Microscopic single-sitting rotary therapy relieving pain permanently.',
-    imageSrc: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceRootcanals,
     tag: 'ROOT CANAL',
     badge: 'Single-Sitting',
     color: '#778D7A',
@@ -508,7 +522,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Teeth Cleaning',
     category: 'HYGIENE',
     shortDesc: 'Ultrasonic hydro-polishing dissolving plaque, tartar, and coffee stains.',
-    imageSrc: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceCleaning,
     tag: 'CLEANING',
     badge: 'Ultrasonic Glow',
     color: '#415A77',
@@ -518,7 +532,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     name: 'Teeth Reshaping',
     category: 'AESTHETICS',
     shortDesc: 'Subtle micro-contouring smoothing jagged edges and uneven enamel.',
-    imageSrc: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=500&q=75',
+    imageSrc: CLINIC_IMAGES.serviceReshaping,
     tag: 'RESHAPING',
     badge: 'Enamel Sculpting',
     color: '#D4C4A8',

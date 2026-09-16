@@ -13,16 +13,30 @@ export const ServicesCarousel: React.FC<ServicesCarouselProps> = ({ onSelectTrea
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const dragStartX = useRef<number>(0);
-
-  // Preload all 18 service images eagerly so they display instantly on load and cycling
-  useEffect(() => {
-    CLINIC_SERVICES.forEach((srv) => {
-      const img = new Image();
-      img.src = srv.imageSrc;
-    });
-  }, []);
-
   const totalServices = CLINIC_SERVICES.length;
+
+  // Preload adjacent services lazily so navigation is instant without choking initial page load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const indicesToPreload = [
+        activeIndex,
+        (activeIndex + 1) % totalServices,
+        (activeIndex - 1 + totalServices) % totalServices,
+        (activeIndex + 2) % totalServices,
+        (activeIndex - 2 + totalServices) % totalServices,
+      ];
+      indicesToPreload.forEach((idx) => {
+        const srv = CLINIC_SERVICES[idx];
+        if (srv?.imageSrc) {
+          const img = new Image();
+          img.src = srv.imageSrc;
+        }
+      });
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [activeIndex, totalServices]);
+
   const activeService = CLINIC_SERVICES[activeIndex];
 
   const handlePrev = () => {
@@ -226,7 +240,7 @@ export const ServicesCarousel: React.FC<ServicesCarouselProps> = ({ onSelectTrea
                       src={service.imageSrc}
                       alt={service.name}
                       referrerPolicy="no-referrer"
-                      loading="eager"
+                      loading={isCenter ? 'eager' : 'lazy'}
                       decoding="async"
                       animate={{
                         x: -diff * 6,
