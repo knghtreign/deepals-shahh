@@ -102,7 +102,7 @@ export const PatientReviewsStack: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ delay: 0.1, type: 'spring', damping: 14, stiffness: 180 }}
-          className="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 overflow-x-auto sm:flex-wrap max-w-4xl mx-auto pb-2 px-1 scrollbar-none"
+          className="flex items-center justify-start sm:justify-center gap-2.5 sm:gap-3 mb-6 sm:mb-8 overflow-x-auto sm:overflow-visible sm:flex-wrap max-w-4xl mx-auto pt-3.5 pb-3 px-3 scrollbar-none"
         >
           {REVIEWS.map((review, idx) => {
             const isSelected = idx === activeIndex;
@@ -110,17 +110,17 @@ export const PatientReviewsStack: React.FC = () => {
               <motion.button
                 key={review.id}
                 onClick={() => handleSelect(idx)}
-                whileHover={{ scale: 1.08, y: -3 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 animate={{
-                  scale: isSelected ? 1.08 : 0.94,
-                  opacity: isSelected ? 1 : 0.7,
+                  scale: isSelected ? 1.05 : 0.94,
+                  opacity: isSelected ? 1 : 0.75,
                 }}
-                transition={{ type: 'spring', damping: 14, stiffness: 180 }}
+                transition={{ type: 'spring', damping: 16, stiffness: 220 }}
                 className={`relative cursor-pointer p-1.5 rounded-2xl transition-all select-none flex flex-col items-center shrink-0 ${
                   isSelected
-                    ? 'ring-2 ring-[#DFAC38] shadow-md z-20 bg-white/90'
-                    : 'hover:opacity-100 z-10 border border-slate-200/80 bg-white/40'
+                    ? 'ring-2 ring-[#DFAC38] shadow-md z-20 bg-white'
+                    : 'hover:opacity-100 z-10 border border-slate-200/80 bg-white/60'
                 }`}
                 title={`${review.patientName} - ${review.treatment}`}
               >
